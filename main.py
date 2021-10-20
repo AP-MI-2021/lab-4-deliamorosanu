@@ -61,26 +61,28 @@ def main():
     while True:
         print("1. Citire date.")
         print("2. Afisarea tuturor numerelor negative")
-        print("3.Afisarea celui mai mic nr care are ultima cif egala cu o cifra citita de la tastatura."
-        print("4.Superprime")
-        print("x. Iesire din program.")
-        optiune = input("Alege optiunea")
-        if optiune == "1":
-            lst = citiredate()
-            print("\n")
-        elif optiune == "2":
-            print(negative(lst))
-            print("\n")
-        elif optiune =="3":
-            print(celmaimic(lst))
-            print("\n")
-        elif optiune == "4"
-            print( is_superprime(lst))
-        elif optiune == "x":
-            break
-        else:
-            print("Reincercati")
+        print("3.Afisarea celui mai mic nr care are ultima cif egala cu o cifra citita de la tastatura.")
+        print("4. Superprim")
+        print("Pentru a inchide, introduce x")
 
+        optiune = input("Alege optiunea")
+
+        while True:
+            printMenu()
+            optiune = input("Dati optiunea: ")
+            if optiune == "1":
+                l = citire_lista()
+            elif optiune == "2":
+                l1 = negative(lst)
+                print(l1[:])
+            elif optiune == "3":
+                l2 =  celmaimic(lst)
+                print(l2[:])
+            elif optiune == "4":
+                is_superprime(lst)
+                print(l3[:])
+            elif optiune == "x":
+                break
 
 
 main()
